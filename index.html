@@ -402,7 +402,8 @@ function applySettings(){
     const wrap=document.getElementById('logoA');
     document.getElementById('logoTxt').style.display='none';
     const img=document.createElement('img');
-    img.src=logoImg;img.alt=s.brandName;img.style.cssText='height:56px;width:auto;object-fit:contain;display:block;';
+    img.src=logoImg;img.alt=s.brandName;
+    img.style.cssText='height:70px;max-width:220px;width:auto;object-fit:contain;display:block;';
     wrap.insertBefore(img,wrap.firstChild);
   }
   // dynamic srch-drop top
@@ -436,7 +437,13 @@ function toggleMob(){
 /* ── ROUTING ── */
 function goHome(){closeSrch();renderHome();scrollTo(0,0);}
 function goCat(id){closeSrch();renderCatPage(id);scrollTo(0,0);}
-function goPage(p){closeSrch();if(p==='about')renderAbout();else if(p==='contact')renderContact();else if(p==='dealer')renderDealer();else if(p==='bank')renderBank();scrollTo(0,0);}
+function goPage(p){closeSrch();
+  if(p==='about')renderAbout();
+  else if(p==='contact')renderContact();
+  else if(p==='dealer')renderDealer();
+  else if(p==='bank')renderBank();
+  else if(['satis','garanti','gizlilik','teslimat','kosullar'].includes(p))renderLegal(p);
+  scrollTo(0,0);}
 function closeSrch(){document.getElementById('srchDrop').classList.remove('open');}
 
 /* ── SLIDER ── */
@@ -521,12 +528,26 @@ function renderHome(){
 }
 
 function injectSlideImgs(){
-  P().filter(p=>p.active&&p.img).slice(0,4).forEach((p,i)=>{
-    const h=document.getElementById('sph'+i);
-    if(!h) return;
-    h.style.position='relative';
-    h.innerHTML=`<img src="${p.img}" alt="${p.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`;
+  // First try admin-saved banners
+  const banners=ld('banners',[]);
+  banners.forEach((b,i)=>{
+    const h=document.getElementById('sph'+i);if(!h)return;
+    if(b.img){
+      h.innerHTML=`<img src="${b.img}" alt="${b.label||'Slayt '+(i+1)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`;
+      h.style.position='relative';
+      // update caption
+      const cap=h.parentElement.querySelector('.slide-cap');
+      if(cap&&b.label)cap.textContent=b.label;
+    }
   });
+  // Then fill remaining slots with product images
+  if(!banners.some(b=>b.img)){
+    P().filter(p=>p.active&&p.img).slice(0,4).forEach((p,i)=>{
+      const h=document.getElementById('sph'+i);if(!h||h.querySelector('img'))return;
+      h.style.position='relative';
+      h.innerHTML=`<img src="${p.img}" alt="${p.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`;
+    });
+  }
 }
 
 function startSlider(){
@@ -779,10 +800,10 @@ function buildFooter(){
       <div class="sb">${s.brandSub}</div>
       <p>2016 yılından bu yana premium dekorasyon ürünleriyle mekanlarınıza değer katıyoruz. 10.000+ ürün çeşidi, Türkiye geneli teslimat.</p>
       <div class="ft-soc">
-        ${s.instagram?`<a class="ft-sl" href="${s.instagram}" target="_blank" title="Instagram">📸</a>`:''}
-        ${s.facebook?`<a class="ft-sl" href="${s.facebook}" target="_blank" title="Facebook">👍</a>`:''}
-        ${s.youtube?`<a class="ft-sl" href="${s.youtube}" target="_blank" title="YouTube">▶️</a>`:''}
-        <a class="ft-sl" href="https://wa.me/${s.whatsapp.replace(/\D/g,'')}" target="_blank" title="WhatsApp">💬</a>
+        ${s.instagram?`<a class="ft-sl" href="${s.instagram}" target="_blank" rel="noopener" title="Instagram">📸</a>`:''}
+        ${s.facebook?`<a class="ft-sl" href="${s.facebook}" target="_blank" rel="noopener" title="Facebook">👍</a>`:''}
+        ${s.youtube?`<a class="ft-sl" href="${s.youtube}" target="_blank" rel="noopener" title="YouTube">▶️</a>`:''}
+        <a class="ft-sl" href="https://wa.me/${s.whatsapp.replace(/\D/g,'')}" target="_blank" rel="noopener" title="WhatsApp">💬</a>
       </div>
     </div>
     <div class="ft-col">
@@ -799,11 +820,11 @@ function buildFooter(){
     </div>
     <div class="ft-col">
       <h4>Yardım & Destek</h4>
-      <a href="#">Satış Sözleşmesi</a>
-      <a href="#">Garanti ve İade Şartları</a>
-      <a href="#">Gizlilik Sözleşmesi</a>
-      <a href="#">Teslimat ve İade</a>
-      <a href="#">Site Kullanım Koşulları</a>
+      <a href="#" onclick="goPage('satis');return false;">Satış Sözleşmesi</a>
+      <a href="#" onclick="goPage('garanti');return false;">Garanti ve İade Şartları</a>
+      <a href="#" onclick="goPage('gizlilik');return false;">Gizlilik Sözleşmesi</a>
+      <a href="#" onclick="goPage('teslimat');return false;">Teslimat ve İade</a>
+      <a href="#" onclick="goPage('kosullar');return false;">Site Kullanım Koşulları</a>
       <h4 style="margin-top:18px;">İletişim</h4>
       <p><strong>Tel:</strong> 0542 646 12 65</p>
       <p><strong>Adres:</strong> Mimar Sinan Mh. No:56/A KONYA</p>
@@ -812,8 +833,93 @@ function buildFooter(){
   <div class="ft-bot">
     <p>© 2025 ${s.brandName}. Tüm hakları saklıdır.</p>
     <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
-  </div>`;
-}
+  </div>`;}
+
+/* ── LEGAL PAGES ── */
+function legalPage(title,content){
+  document.getElementById('main').innerHTML=`
+  <div class="pg-hd">
+    <div class="pg-bc"><a href="#" onclick="goHome();return false;">Ana Sayfa</a> / ${title}</div>
+    <h1>${title}</h1>
+  </div>
+  <div class="pg-body" style="max-width:860px;">
+    <div style="background:var(--dark3);border:1px solid rgba(201,168,76,.07);padding:36px;line-height:1.9;color:var(--muted);font-size:14px;">
+      ${content}
+    </div>
+  </div>`;}
+
+const BRAND='Dekorcum Yapı & Dekorasyon';
+const ADRES='Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. Mustafa Özsüllü Apt. No:56/A KONYA';
+
+function renderLegal(page){
+  if(page==='satis') legalPage('Satış Sözleşmesi',`
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px;">Mesafeli Satış Sözleşmesi</h3>
+    <p><strong style="color:var(--text);">Satıcı Bilgileri:</strong><br>${BRAND}<br>${ADRES}<br>Tel: 0542 646 12 65</p>
+    <br>
+    <p><strong style="color:var(--text);">1. Konu</strong><br>İşbu sözleşme, alıcının ${BRAND} web sitesi üzerinden elektronik ortamda siparişini verdiği, sözleşmede belirtilen niteliklere sahip ürünün satışı ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği hükümleri gereğince tarafların hak ve yükümlülüklerini kapsamaktadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">2. Sözleşme Konusu Ürünler</strong><br>Ürün bilgileri, miktarı, satış fiyatı ve ödeme bilgileri sipariş formunda belirtilmektedir.</p>
+    <br>
+    <p><strong style="color:var(--text);">3. Teslimat</strong><br>Ürünler, stok durumuna göre sipariş tarihinden itibaren 3-7 iş günü içinde kargo ile teslim edilmektedir. Teslimat adresi, sipariş sırasında alıcı tarafından belirtilen adrestir.</p>
+    <br>
+    <p><strong style="color:var(--text);">4. Ödeme</strong><br>Ödemeler havale/EFT yöntemiyle gerçekleştirilmektedir. Online ödeme sistemi bulunmamaktadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">5. Cayma Hakkı</strong><br>Alıcı, teslim aldığı tarihten itibaren 14 (on dört) gün içinde herhangi bir gerekçe göstermeksizin cayma hakkını kullanabilir. Cayma bildiriminin iletişim kanalları aracılığıyla satıcıya ulaştırılması gerekmektedir.</p>`);
+
+  else if(page==='garanti') legalPage('Garanti ve İade Şartları',`
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px;">Garanti ve İade Şartları</h3>
+    <p><strong style="color:var(--text);">Garanti Süresi</strong><br>Tüm ürünlerimiz, 6502 sayılı Tüketicinin Korunması Hakkında Kanun kapsamında 2 (iki) yıl garanti süresi ile sunulmaktadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">Garanti Kapsamı</strong><br>Ürünlerde üretim kaynaklı malzeme ve işçilik hataları garanti kapsamındadır. Kullanım hatası, doğal aşınma, dış etkenlerden kaynaklanan hasarlar garanti kapsamı dışındadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">İade Koşulları</strong><br>
+    • Teslim tarihinden itibaren 14 gün içinde iade talebi oluşturulabilir.<br>
+    • Ürünün orijinal ambalajında, kullanılmamış ve hasarsız olması gerekmektedir.<br>
+    • Özel kesim veya sipariş üzerine üretilen ürünler iade kapsamı dışındadır.<br>
+    • İade kargo bedeli müşteriye aittir.</p>
+    <br>
+    <p><strong style="color:var(--text);">İade Süreci</strong><br>İade talebinizi 0542 646 12 65 numaralı müşteri temsilcimizi arayarak veya WhatsApp üzerinden iletebilirsiniz. Ürün tarafımıza ulaştıktan sonra 10 iş günü içinde ödemeniz iade edilir.</p>`);
+
+  else if(page==='gizlilik') legalPage('Gizlilik Sözleşmesi',`
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px;">Gizlilik ve Kişisel Verilerin Korunması</h3>
+    <p>${BRAND} olarak kişisel verilerinizin gizliliğine önem veriyoruz. Bu politika, sitemizi ziyaret ettiğinizde ve hizmetlerimizi kullandığınızda kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">Toplanan Veriler</strong><br>
+    • İletişim formları aracılığıyla ilettiğiniz ad, telefon ve e-posta bilgileri<br>
+    • WhatsApp üzerinden iletilen mesajlar<br>
+    • Sipariş süreçlerinde talep edilen teslimat bilgileri</p>
+    <br>
+    <p><strong style="color:var(--text);">Verilerin Kullanımı</strong><br>Kişisel verileriniz yalnızca sipariş ve müşteri hizmetleri süreçlerinde kullanılmaktadır. Üçüncü şahıslarla paylaşılmamaktadır.</p>
+    <br>
+    <p><strong style="color:var(--text);">KVKK Hakları</strong><br>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında verilerinize erişim, düzeltme, silme ve itiraz haklarına sahipsiniz. Taleplerinizi info@dekorcum.com adresine iletebilirsiniz.</p>`);
+
+  else if(page==='teslimat') legalPage('Teslimat ve İade',`
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px;">Teslimat Bilgileri</h3>
+    <p><strong style="color:var(--text);">Teslimat Süresi</strong><br>Siparişleriniz stok durumuna göre 3-7 iş günü içinde kargoya teslim edilmektedir. Yoğun dönemlerde bu süre uzayabilir.</p>
+    <br>
+    <p><strong style="color:var(--text);">Teslimat Bölgesi</strong><br>Türkiye'nin 81 iline teslimat yapılmaktadır. Kargo ücreti sipariş miktarına ve adrese göre belirlenmektedir.</p>
+    <br>
+    <p><strong style="color:var(--text);">Kargo Takibi</strong><br>Kargoya verilen siparişleriniz için takip numarası WhatsApp üzerinden iletilecektir.</p>
+    <br>
+    <p><strong style="color:var(--text);">Hasarlı Teslimat</strong><br>Kargo ile gelen ürünlerde teslimat anında hasar tespit edilirse kargo görevlisine tutanak tutturulması gerekmektedir. Sonradan bildirilen kargo hasarlarında sorumluluk kabul edilmemektedir.</p>
+    <br>
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:18px;margin:20px 0 12px;">İade Süreci</h3>
+    <p>İade etmek istediğiniz ürünü orijinal ambalajında, fatura ile birlikte aşağıdaki adrese gönderebilirsiniz:<br><br>
+    <span style="color:var(--gold);">${ADRES}</span><br><br>
+    İade kargosu tarafınızca ödenmelidir. Ürün tarafımıza ulaştıktan sonra 10 iş günü içinde ödemeniz iade edilir.</p>`);
+
+  else if(page==='kosullar') legalPage('Site Kullanım Koşulları',`
+    <h3 style="color:var(--white);font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px;">Site Kullanım Koşulları</h3>
+    <p>${BRAND} web sitesine erişim ve site içeriklerinin kullanımı aşağıdaki koşullara tabidir. Siteyi kullanarak bu koşulları kabul etmiş sayılırsınız.</p>
+    <br>
+    <p><strong style="color:var(--text);">Fikri Mülkiyet</strong><br>Sitedeki tüm içerikler (metin, görsel, logo, tasarım) ${BRAND}'a aittir. İzinsiz kopyalanamaz, çoğaltılamaz veya dağıtılamaz.</p>
+    <br>
+    <p><strong style="color:var(--text);">Sorumluluk Sınırlaması</strong><br>Site içeriğindeki bilgiler genel bilgilendirme amaçlıdır. Fiyat ve stok bilgileri önceden haber verilmeksizin değişebilir.</p>
+    <br>
+    <p><strong style="color:var(--text);">Bağlantılı Siteler</strong><br>Sitemizden bağlantı verilen üçüncü taraf sitelerin içeriğinden sorumlu değiliz.</p>
+    <br>
+    <p><strong style="color:var(--text);">Uygulanacak Hukuk</strong><br>İşbu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklarda Konya Mahkemeleri yetkilidir.</p>`);}
+
 </script>
 </body>
 </html>

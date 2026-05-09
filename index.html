@@ -3,53 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dekor Panel - MDF Panel, Duvar Lambri, Duvar Çıtası, Akustik Panel, Süpürgelik. Konya merkezli, Türkiye geneli teslimat. 10.000+ ürün çeşidi.">
-<meta name="keywords" content="dekor panel, MDF panel, duvar lambri, duvar çıtası, akustik panel, süpürgelik, osmanlı saray tavanı, kartonpiyer, dekorasyon, Konya">
+<meta name="description" content="Dekopanel - MDF Panel, Duvar Lambri, Duvar Çıtası, Akustik Panel, Süpürgelik. Konya merkezli, Türkiye geneli teslimat. 10.000+ ürün çeşidi.">
+<meta name="keywords" content="dekopanel, MDF panel, duvar lambri, duvar çıtası, akustik panel, süpürgelik, osmanlı saray tavanı, kartonpiyer, dekorasyon, Konya">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Dekor Panel | Premium Dekorasyon Ürünleri">
+<meta property="og:title" content="Dekopanel | Premium Dekorasyon Ürünleri">
 <meta property="og:description" content="10.000+ tasarımda dekorasyon ürünleri. MDF Panel, Lambri, Akustik Panel ve daha fazlası.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.dekorpanel.com.tr">
-<title>Dekor Panel | MDF Panel, Lambri, Akustik Panel - dekorpanel.com.tr</title>
+<meta property="og:url" content="https://www.dekopanel.com.tr">
+<title>Dekopanel | MDF Panel, Lambri, Akustik Panel - dekopanel.com.tr</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --gold:#C9A84C;--gdark:#8B6914;--glight:#E8C97A;
-  --d:#0A0A0A;--d2:#111;--d3:#181818;--d4:#202020;--d5:#2A2A2A;
-  --t:#E0D8CC;--m:#7A7060;--w:#F5F0E8;--red:#B52A1A;
-}
+:root{--gold:#C9A84C;--gd:#8B6914;--gl:#E8C97A;--d:#0A0A0A;--d2:#111;--d3:#181818;--d4:#202020;--d5:#2A2A2A;--t:#E0D8CC;--m:#7A7060;--w:#F5F0E8;--red:#B52A1A;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--d);color:var(--t);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
+button{font-family:'DM Sans',sans-serif;}
 
 /* TICKER */
 .ticker{background:linear-gradient(90deg,#14100a,#1e1508,#14100a);padding:9px 0;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.18);}
 .ticker-t{display:flex;width:max-content;animation:tick 40s linear infinite;}
-.ticker-t span{white-space:nowrap;padding:0 44px;font-size:11.5px;font-weight:500;color:var(--glight);letter-spacing:.8px;}
+.ticker-t span{white-space:nowrap;padding:0 44px;font-size:11.5px;font-weight:500;color:var(--gl);letter-spacing:.8px;}
 .ticker-t span::before{content:"◆";margin-right:14px;font-size:7px;opacity:.6;}
 @keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
 /* HEADER */
 header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.1);position:sticky;top:0;z-index:1000;}
 .hdr{display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:80px;gap:20px;}
-.logo-a{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.logo-img{height:68px;max-width:200px;width:auto;object-fit:contain;}
-.logo-fallback{display:flex;flex-direction:column;}
-.logo-fallback .bn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold);letter-spacing:3px;line-height:1;}
-.logo-fallback .bs{font-size:8.5px;letter-spacing:4px;color:var(--m);text-transform:uppercase;margin-top:4px;}
+.logo-a{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer;}
+.logo-a img.logo-img{height:68px;max-width:200px;width:auto;object-fit:contain;}
+.logo-fb{display:flex;flex-direction:column;}
+.logo-fb .bn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold);letter-spacing:3px;line-height:1;}
+.logo-fb .bs{font-size:8.5px;letter-spacing:4px;color:var(--m);text-transform:uppercase;margin-top:4px;}
 .hdr-srch{flex:1;max-width:440px;display:flex;align-items:stretch;background:var(--d3);border:1px solid rgba(201,168,76,.16);}
-.hdr-srch input{flex:1;background:transparent;border:none;outline:none;padding:0 16px;color:var(--t);font-family:'DM Sans',sans-serif;font-size:13px;min-width:0;}
+.hdr-srch input{flex:1;background:transparent;border:none;outline:none;padding:0 16px;color:var(--t);font-size:13px;min-width:0;}
 .hdr-srch input::placeholder{color:var(--m);}
-.hdr-srch button{background:var(--gold);border:none;padding:0 15px;cursor:pointer;color:#0A0A0A;display:flex;align-items:center;transition:filter .2s;}
-.hdr-srch button:hover{filter:brightness(1.1);}
+.hdr-srch button{background:var(--gold);border:none;padding:0 15px;cursor:pointer;color:#0A0A0A;display:flex;align-items:center;}
 .hdr-srch svg{width:15px;height:15px;display:block;}
 .hdr-r{display:flex;align-items:center;gap:14px;}
 .hl{color:var(--m);font-size:12.5px;display:flex;align-items:center;gap:6px;transition:color .3s;cursor:pointer;}
 .hl:hover{color:var(--gold);}
-.wa-hl{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff!important;padding:9px 15px;font-weight:600;font-size:12px!important;}
+.wa-hl{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff!important;padding:9px 15px;font-weight:600;font-size:12px!important;border-radius:3px;}
 .mob-btn{display:none;background:none;border:none;color:var(--t);cursor:pointer;padding:6px;}
 
 /* NAV */
@@ -68,25 +64,25 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 /* SEARCH DROP */
 .srch-drop{display:none;position:fixed;left:0;right:0;z-index:998;background:var(--d2);border-bottom:1px solid rgba(201,168,76,.12);max-height:360px;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.6);}
 .srch-drop.open{display:block;}
-.srch-item{display:flex;gap:14px;align-items:center;padding:12px 40px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.03);transition:background .2s;}
-.srch-item:hover{background:var(--d3);}
-.srch-thumb{width:50px;height:50px;background:var(--d4);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.srch-thumb img{width:100%;height:100%;object-fit:cover;}
-.srch-info strong{display:block;font-size:13px;color:var(--t);margin-bottom:3px;}
-.srch-info span{font-size:12px;color:var(--gold);}
+.si{display:flex;gap:14px;align-items:center;padding:12px 40px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.03);transition:background .2s;}
+.si:hover{background:var(--d3);}
+.sithumb{width:50px;height:50px;background:var(--d4);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.sithumb img{width:100%;height:100%;object-fit:cover;}
+.siinfo strong{display:block;font-size:13px;color:var(--t);margin-bottom:3px;}
+.siinfo span{font-size:12px;color:var(--gold);}
 
 /* HERO */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:500px;background:var(--d2);overflow:hidden;}
 .hero-l{padding:60px 52px;display:flex;flex-direction:column;justify-content:center;position:relative;}
-.hero-l::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0 50%,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none;}
+.hero-l::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0 50%,rgba(201,168,76,.05),transparent 65%);pointer-events:none;}
 .hero-pill{display:inline-block;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;margin-bottom:18px;font-weight:600;width:fit-content;}
 .hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.1;color:var(--w);margin-bottom:16px;}
 .hero-h1 span{color:var(--gold);}
 .hero-p{color:var(--m);font-size:14.5px;line-height:1.85;margin-bottom:30px;max-width:460px;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-g{background:linear-gradient(135deg,var(--gold),var(--gdark));color:#0A0A0A;padding:13px 30px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:all .3s;}
+.btn-g{background:linear-gradient(135deg,var(--gold),var(--gd));color:#0A0A0A;padding:13px 30px;font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:all .3s;}
 .btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.35);}
-.btn-o{background:transparent;color:var(--gold);padding:13px 30px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;border:1px solid rgba(201,168,76,.4);cursor:pointer;display:inline-block;transition:all .3s;}
+.btn-o{background:transparent;color:var(--gold);padding:13px 30px;font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;border:1px solid rgba(201,168,76,.4);cursor:pointer;display:inline-block;transition:all .3s;}
 .btn-o:hover{background:rgba(201,168,76,.07);}
 
 /* SLIDER */
@@ -97,7 +93,7 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .slide-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:1;pointer-events:none;}
 .slide-ph .sn{font-family:'Cormorant Garamond',serif;font-size:90px;color:rgba(201,168,76,.05);font-weight:700;line-height:1;}
 .slide-ph .sl{font-size:12px;color:var(--m);letter-spacing:3px;text-transform:uppercase;}
-.slide-cap{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:var(--w);font-size:13px;font-weight:500;letter-spacing:.4px;z-index:2;}
+.slide-cap{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:var(--w);font-size:13px;font-weight:500;z-index:2;}
 .s-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:1px solid rgba(201,168,76,.18);color:var(--gold);width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;font-size:20px;transition:all .3s;user-select:none;}
 .s-arr:hover{background:rgba(201,168,76,.18);}
 .s-arr.prev{left:10px;}
@@ -115,7 +111,7 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .feat-t strong{display:block;font-size:12.5px;color:var(--t);font-weight:600;margin-bottom:2px;}
 .feat-t span{font-size:11px;color:var(--m);}
 
-/* SECTION */
+/* SECTIONS */
 .sec{padding:64px 40px;}
 .sec-alt{background:var(--d2);}
 .sec-hd{text-align:center;margin-bottom:48px;}
@@ -140,7 +136,7 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .pc:hover .pc-img img{transform:scale(1.06);}
 .pc-no{width:100%;height:100%;background:linear-gradient(135deg,var(--d4),var(--d5));display:flex;align-items:center;justify-content:center;}
 .pc-no svg{width:48px;height:48px;opacity:.08;}
-.pc-bdg{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;padding:3px 9px;letter-spacing:.4px;z-index:1;}
+.pc-bdg{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;padding:3px 9px;z-index:1;}
 .bn{background:var(--gold);color:#0A0A0A;}
 .bs{background:var(--red);color:#fff;}
 .pc-body{padding:16px;}
@@ -153,15 +149,15 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .p-was{font-size:12px;color:var(--m);text-decoration:line-through;}
 .p-unit{font-size:11px;color:var(--m);}
 .pc-ft{display:flex;gap:7px;}
-.btn-det{flex:1;background:transparent;border:1px solid rgba(201,168,76,.18);color:var(--m);padding:8px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:all .3s;text-transform:uppercase;}
+.btn-det{flex:1;background:transparent;border:1px solid rgba(201,168,76,.18);color:var(--m);padding:8px;font-size:11px;font-weight:600;cursor:pointer;transition:all .3s;text-transform:uppercase;}
 .btn-det:hover{border-color:var(--gold);color:var(--gold);}
-.btn-qte{flex:2;background:linear-gradient(135deg,var(--gold),var(--gdark));color:#0A0A0A;border:none;padding:8px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:filter .3s;text-transform:uppercase;}
+.btn-qte{flex:2;background:linear-gradient(135deg,var(--gold),var(--gd));color:#0A0A0A;border:none;padding:8px;font-size:11px;font-weight:700;cursor:pointer;transition:filter .3s;text-transform:uppercase;}
 .btn-qte:hover{filter:brightness(1.1);}
 
 /* CAMPAIGN */
 .camp-w{padding:0 40px 64px;}
 .camp-box{background:linear-gradient(135deg,var(--d3) 0%,#16110a 60%,var(--d3) 100%);border:1px solid rgba(201,168,76,.22);padding:52px 60px;display:flex;align-items:center;justify-content:space-between;gap:36px;position:relative;overflow:hidden;}
-.camp-box::before{content:'';position:absolute;right:-60px;top:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%);pointer-events:none;}
+.camp-box::before{content:'';position:absolute;right:-60px;top:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,.07),transparent 70%);pointer-events:none;}
 .camp-txt{position:relative;}
 .camp-tag{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
 .camp-txt h2{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,36px);color:var(--w);margin-bottom:12px;font-weight:700;}
@@ -195,7 +191,7 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .m-desc{color:var(--m);font-size:13.5px;line-height:1.8;margin-bottom:18px;}
 .m-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
 .m-chip{font-size:10.5px;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.14);color:var(--gold);padding:4px 9px;}
-.wa-big{width:100%;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;border:none;padding:14px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:filter .3s;}
+.wa-big{width:100%;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;border:none;padding:14px;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:filter .3s;}
 .wa-big:hover{filter:brightness(1.1);}
 
 /* PAGES */
@@ -206,7 +202,7 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .pg-body{padding:48px 40px;max-width:1200px;margin:0 auto;}
 .flt-row{padding:16px 40px;background:var(--d3);border-bottom:1px solid rgba(201,168,76,.06);display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
 .flt-lbl{font-size:11px;color:var(--m);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
-.flt-b{background:transparent;border:1px solid rgba(255,255,255,.07);color:var(--m);padding:6px 13px;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all .3s;font-weight:600;}
+.flt-b{background:transparent;border:1px solid rgba(255,255,255,.07);color:var(--m);padding:6px 13px;font-size:11px;cursor:pointer;transition:all .3s;font-weight:600;}
 .flt-b.on,.flt-b:hover{border-color:var(--gold);color:var(--gold);}
 
 /* ABOUT */
@@ -234,15 +230,14 @@ header{background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-bottom:1p
 .cf-w h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--w);margin-bottom:22px;}
 .cf-g{margin-bottom:13px;}
 .cf-g label{display:block;font-size:11px;color:var(--m);letter-spacing:.4px;text-transform:uppercase;font-weight:600;margin-bottom:7px;}
-.cf-inp{width:100%;background:var(--d4);border:1px solid rgba(201,168,76,.11);color:var(--t);padding:11px 13px;font-family:'DM Sans',sans-serif;font-size:13.5px;outline:none;transition:border .3s;}
+.cf-inp{width:100%;background:var(--d4);border:1px solid rgba(201,168,76,.11);color:var(--t);padding:11px 13px;font-size:13.5px;outline:none;transition:border .3s;}
 .cf-inp:focus{border-color:var(--gold);}
 textarea.cf-inp{resize:vertical;min-height:96px;}
 
 /* LEGAL */
 .legal-box{background:var(--d3);border:1px solid rgba(201,168,76,.07);padding:36px;line-height:1.9;color:var(--m);font-size:14px;}
-.legal-box h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--w);margin-bottom:16px;margin-top:24px;}
+.legal-box h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--w);margin-bottom:14px;margin-top:22px;}
 .legal-box h3:first-child{margin-top:0;}
-.legal-box strong{color:var(--t);}
 
 /* FOOTER */
 footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
@@ -260,58 +255,48 @@ footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
 .ft-col p strong{color:var(--t);font-weight:500;}
 .ft-bot{padding:16px 40px;border-top:1px solid rgba(201,168,76,.05);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
 .ft-bot p{font-size:11.5px;color:var(--m);}
-.ft-bot a{color:var(--gold);cursor:pointer;}
+.ft-bot a{color:var(--gold);}
+.ft-dev{font-size:11px;color:rgba(122,112,96,.5);}
+.ft-dev a{color:rgba(201,168,76,.4);transition:color .3s;}
+.ft-dev a:hover{color:var(--gold);}
 
-/* MOBILE */
-@media(max-width:1100px){
-  .ft-top{grid-template-columns:1fr 1fr;gap:32px;}
-  .about-g{grid-template-columns:1fr;}
-  .contact-g{grid-template-columns:1fr;}
-}
+/* RESPONSIVE */
+@media(max-width:1100px){.ft-top{grid-template-columns:1fr 1fr;gap:32px;}.about-g{grid-template-columns:1fr;}.contact-g{grid-template-columns:1fr;}}
 @media(max-width:768px){
   .hdr{padding:0 16px;height:64px;gap:10px;}
-  .logo-img{height:52px;max-width:160px;}
-  .logo-fallback .bn{font-size:20px;}
-  .logo-fallback .bs{display:none;}
-  .hdr-srch{display:none;}
-  .wa-hl{display:none;}
-  .mob-btn{display:flex;}
+  .logo-fb .bn{font-size:20px;} .logo-fb .bs{display:none;}
+  .logo-a img.logo-img{height:50px;max-width:150px;}
+  .hdr-srch{display:none;} .wa-hl{display:none;} .mob-btn{display:flex;}
   .dsk-nav .nav-in{display:none;}
-  .srch-drop{top:64px;}
-  .srch-item{padding:10px 16px;}
+  .srch-drop{top:64px;} .si{padding:10px 16px;}
   .hero{grid-template-columns:1fr;}
   .hero-l{padding:36px 20px;}
   .hero-r{min-height:240px;}
-  .slides{min-height:240px;}
-  .slide{min-height:240px;}
+  .slides,.slide{min-height:240px;}
   .slide-ph .sn{font-size:60px;}
   .hero-btns{flex-direction:column;gap:10px;}
-  .btn-g,.btn-o{width:100%;text-align:center;padding:13px 20px;}
+  .btn-g,.btn-o{width:100%;text-align:center;padding:13px 20px;display:block;}
   .feats-g{grid-template-columns:1fr 1fr;}
   .feat{padding:16px 14px;gap:10px;}
-  .sec{padding:44px 16px;}
-  .sec-hd{margin-bottom:32px;}
+  .sec{padding:44px 16px;} .sec-hd{margin-bottom:32px;}
   .prods-g{grid-template-columns:repeat(2,1fr);gap:12px;}
   .camp-w{padding:0 16px 44px;}
   .camp-box{flex-direction:column;padding:30px 20px;text-align:center;}
-  .camp-txt p{max-width:100%;}
-  .camp-bdg{margin:0 auto;}
+  .camp-txt p{max-width:100%;} .camp-bdg{margin:0 auto;}
   .dealer{padding:52px 16px;}
   .flt-row{padding:12px 16px;}
-  .pg-hd{padding:36px 16px;}
-  .pg-body{padding:28px 16px;}
+  .pg-hd{padding:36px 16px;} .pg-body{padding:28px 16px;}
   .ft-top{padding:36px 16px 28px;grid-template-columns:1fr;}
   .ft-bot{padding:14px 16px;flex-direction:column;text-align:center;gap:8px;}
   .modal-body{grid-template-columns:1fr;}
-  .modal-imgw{min-height:220px;}
-  .modal-info{padding:20px;}
+  .modal-imgw{min-height:220px;} .modal-info{padding:20px;}
 }
 @media(max-width:480px){
   .feats-g{grid-template-columns:1fr;}
   .prods-g{grid-template-columns:1fr;}
   .a-stats{grid-template-columns:1fr;}
-  .camp-bdg{width:120px;height:120px;}
-  .camp-bdg .pct{font-size:34px;}
+  .camp-bdg{width:120px;height:120px;} .camp-bdg .pct{font-size:34px;}
+  .hero-btns{align-items:stretch;}
 }
 </style>
 </head>
@@ -324,12 +309,12 @@ footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
 
 <header>
   <div class="hdr">
-    <a class="logo-a" id="logoA" onclick="goHome()" style="cursor:pointer;">
-      <div class="logo-fallback" id="logoFb">
-        <span class="bn" id="bName">DEKOR PANEL</span>
-        <span class="bs" id="bSub">dekorpanel.com.tr</span>
+    <div class="logo-a" id="logoA" onclick="goHome()">
+      <div class="logo-fb" id="logoFb">
+        <span class="bn" id="bName">DEKOPANEL</span>
+        <span class="bs" id="bSub">dekopanel.com.tr</span>
       </div>
-    </a>
+    </div>
     <div class="hdr-srch">
       <input type="text" id="srchInp" placeholder="Ürün adı veya stok kodu..." autocomplete="off">
       <button onclick="doSearch()" aria-label="Ara">
@@ -338,7 +323,7 @@ footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
     </div>
     <div class="hdr-r">
       <a id="waHdr" class="hl wa-hl" href="#" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
         WhatsApp
       </a>
       <span class="hl" onclick="goPage('contact')">İletişim</span>
@@ -356,10 +341,7 @@ footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
 
 <div class="modal-bg" id="prodModal" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
-    <div class="modal-hd">
-      <h2>Ürün Detayı</h2>
-      <button class="modal-cls" onclick="closeModal()">✕</button>
-    </div>
+    <div class="modal-hd"><h2>Ürün Detayı</h2><button class="modal-cls" onclick="closeModal()">✕</button></div>
     <div class="modal-body" id="modalBody"></div>
   </div>
 </div>
@@ -367,316 +349,249 @@ footer{background:var(--d2);border-top:1px solid rgba(201,168,76,.09);}
 <footer id="ftEl"></footer>
 
 <script>
-/* DATA */
-function ld(k,fb){try{const d=localStorage.getItem('dk_'+k);return d?JSON.parse(d):fb;}catch(e){return fb;}}
-
-function S(){return ld('settings',{brandName:'DEKOR PANEL',brandSub:'dekorpanel.com.tr',phone:'0542 646 12 65',whatsapp:'905426461265',email:'info@dekorpanel.com.tr',address:'Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. Mustafa Özsüllü Apt. No:56/A KONYA',instagram:'https://www.instagram.com/dekorcum_toptan',facebook:'https://www.facebook.com/Dekorcum-Yap%C4%B1-Dekorasyon-353565921947690',youtube:'',campaign:{active:true,title:'Bayi Kampanyası',desc:'Toptan alımlarda özel fiyatlar ve avantajlı ödeme koşulları için bizimle iletişime geçin.',pct:'%15',label:'İndirim'},marqueeItems:['MDF Panel','Akustik Panel','Duvar Çıtası','Lambri','Bordür','Süpürgelik','Motifler','Toptan Satış']});}
+function ld(k,fb){try{var d=localStorage.getItem('dk_'+k);return d?JSON.parse(d):fb;}catch(e){return fb;}}
+function S(){return ld('settings',{brandName:'DEKOPANEL',brandSub:'dekopanel.com.tr',phone:'0542 646 12 65',whatsapp:'905426461265',email:'info@dekopanel.com.tr',address:'Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. Mustafa Özsüllü Apt. No:56/A KONYA',instagram:'https://www.instagram.com/dekorcum_toptan',facebook:'https://www.facebook.com/Dekorcum-Yap%C4%B1-Dekorasyon-353565921947690',youtube:'',campaign:{active:true,title:'Bayi Kampanyası',desc:'Toptan alımlarda özel fiyatlar ve avantajlı ödeme koşulları için bizimle iletişime geçin.',pct:'%15',label:'İndirim'},marqueeItems:['MDF Panel','Akustik Panel','Duvar Çıtası','Lambri','Bordür','Süpürgelik','Motifler','Toptan Satış']});}
 function C(){return ld('categories',[{id:1,name:'MDF Panel',slug:'mdf-panel',desc:'Dekoratif duvar panelleri'},{id:2,name:'Tavan & Duvar Lambri',slug:'lambri',desc:'Tavan ve duvar kaplamalar'},{id:3,name:'Duvar Çıtası',slug:'duvar-citasi',desc:'Her ölçüde duvar çıtaları'},{id:4,name:'Motifler',slug:'motifler',desc:'Dekoratif motifler'},{id:5,name:'Duvar Bordürleri',slug:'borduler',desc:'Klasik ve modern bordürler'},{id:6,name:'Süpürgelikler',slug:'supurgelik',desc:'PVC ve MDF süpürgelikler'},{id:7,name:'Akustik Panel',slug:'akustik',desc:'Ses ve ısı yalıtım panelleri'}]);}
-function P(){return ld('products',[{id:1,name:'DMP-ANADOLU CEVİZ MDF DUVAR PANELİ',code:'DMP-001',catId:1,price:300,oldPrice:350,unit:'boy',stock:100,badge:'İndirim',colors:['Ceviz','Beyaz'],desc:'1 boy için fiyatlandırılmıştır. Neme ve suya dayanıklı.',img:'',active:true},{id:2,name:'DP-OMEGA GÜMÜŞ EFEKTLİ SİYAH PANEL',code:'DP-002',catId:1,price:300,oldPrice:330,unit:'boy',stock:80,badge:'Yeni',colors:['Siyah','Gümüş'],desc:'Neme ve suya dayanıklı premium panel.',img:'',active:true},{id:3,name:'GOLD ALTIN DUVAR ÇITASI',code:'DC-001',catId:3,price:85,oldPrice:null,unit:'adet',stock:500,badge:'',colors:['Gold','Gümüş','Bronz'],desc:'Dekoratif altın duvar çıtası.',img:'',active:true},{id:4,name:'AKUSTİK SES YALITIM PANELİ',code:'AK-001',catId:7,price:450,oldPrice:null,unit:'m²',stock:200,badge:'Yeni',colors:['Gri','Krem','Antrasit'],desc:'Profesyonel ses ve ısı yalıtım paneli.',img:'',active:true},{id:5,name:'PVC SÜPÜRGELİK 8CM',code:'SP-001',catId:6,price:45,oldPrice:null,unit:'metre',stock:1000,badge:'',colors:['Beyaz','Krem'],desc:'Dayanıklı PVC süpürgelik.',img:'',active:true},{id:6,name:'TAVAN LAMBRİSİ BEYAZ',code:'TL-001',catId:2,price:120,oldPrice:140,unit:'boy',stock:300,badge:'İndirim',colors:['Beyaz','Krem'],desc:'Klasik tavan lambri.',img:'',active:true},{id:7,name:'DUVAR BORDÜRİ KLASİK',code:'DB-001',catId:5,price:65,oldPrice:null,unit:'metre',stock:400,badge:'',colors:['Altın','Gümüş'],desc:'Klasik duvar bordürü.',img:'',active:true},{id:8,name:'MOTİF ROZET SETİ',code:'MT-001',catId:4,price:180,oldPrice:null,unit:'takım',stock:150,badge:'Yeni',colors:['Beyaz','Krem','Gold'],desc:'Dekoratif rozet motif seti.',img:'',active:true}]);}
+function P(){return ld('products',[{id:1,name:'DMP-ANADOLU CEVİZ MDF DUVAR PANELİ',code:'DMP-001',catId:1,price:300,oldPrice:350,unit:'boy',stock:100,badge:'İndirim',colors:['Ceviz','Beyaz'],desc:'1 boy için fiyatlandırılmıştır.',img:'',active:true},{id:2,name:'DP-OMEGA GÜMÜŞ EFEKTLİ SİYAH PANEL',code:'DP-002',catId:1,price:300,oldPrice:330,unit:'boy',stock:80,badge:'Yeni',colors:['Siyah','Gümüş'],desc:'Premium panel.',img:'',active:true},{id:3,name:'GOLD ALTIN DUVAR ÇITASI',code:'DC-001',catId:3,price:85,oldPrice:null,unit:'adet',stock:500,badge:'',colors:['Gold','Gümüş'],desc:'Dekoratif altın çıta.',img:'',active:true},{id:4,name:'AKUSTİK SES YALITIM PANELİ',code:'AK-001',catId:7,price:450,oldPrice:null,unit:'m²',stock:200,badge:'Yeni',colors:['Gri','Krem'],desc:'Ses ve ısı yalıtım.',img:'',active:true},{id:5,name:'PVC SÜPÜRGELİK 8CM',code:'SP-001',catId:6,price:45,oldPrice:null,unit:'metre',stock:1000,badge:'',colors:['Beyaz','Krem'],desc:'Dayanıklı PVC süpürgelik.',img:'',active:true},{id:6,name:'TAVAN LAMBRİSİ BEYAZ',code:'TL-001',catId:2,price:120,oldPrice:140,unit:'boy',stock:300,badge:'İndirim',colors:['Beyaz','Krem'],desc:'Klasik tavan lambri.',img:'',active:true}]);}
+function BN(){return ld('banners',[{label:'',img:''},{label:'',img:''},{label:'',img:''},{label:'',img:''}]);}
 
-/* INIT */
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',function(){
   applySettings();buildNav();buildFooter();renderHome();
   document.getElementById('srchInp').addEventListener('input',liveSearch);
-  document.getElementById('srchInp').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
-  document.addEventListener('click',e=>{if(!e.target.closest('.hdr-srch')&&!e.target.closest('#srchDrop'))closeSrch();});
+  document.getElementById('srchInp').addEventListener('keydown',function(e){if(e.key==='Enter')doSearch();});
+  document.addEventListener('click',function(e){if(!e.target.closest('.hdr-srch')&&!e.target.closest('#srchDrop'))closeSrch();});
 });
 
 function applySettings(){
-  const s=S();
+  var s=S();
   document.getElementById('bName').textContent=s.brandName;
   document.getElementById('bSub').textContent=s.brandSub;
   document.getElementById('waHdr').href='https://wa.me/'+s.whatsapp.replace(/\D/g,'')+'?text='+encodeURIComponent('Merhaba, bilgi almak istiyorum.');
-  const lg=ld('logoImg','');
+  var lg=ld('logoImg','');
   if(lg){
     document.getElementById('logoFb').style.display='none';
-    const img=document.createElement('img');
-    img.src=lg;img.alt=s.brandName;img.className='logo-img';
+    var img=document.createElement('img');
+    img.src=lg; img.alt=s.brandName; img.className='logo-img';
     document.getElementById('logoA').insertBefore(img,document.getElementById('logoA').firstChild);
   }
-  // dynamic search drop top
-  function setST(){document.getElementById('srchDrop').style.top=document.querySelector('header').offsetHeight+'px';}
-  setST();window.addEventListener('resize',setST);
+  function setST(){var hh=document.querySelector('header').offsetHeight; document.getElementById('srchDrop').style.top=hh+'px';}
+  setST(); window.addEventListener('resize',setST);
 }
 
 function buildNav(){
-  const items=[{l:'Anasayfa',fn:'goHome()'},...C().map(c=>({l:c.name,fn:'goCat('+c.id+')'})),{l:'Hakkımızda',fn:"goPage('about')"},{l:'Bayi Ol',fn:"goPage('dealer')"},{l:'İletişim',fn:"goPage('contact')"}];
-  const html=items.map(x=>'<a onclick="'+x.fn+'" >'+x.l+'</a>').join('');
+  var items=[{l:'Anasayfa',fn:'goHome()'}].concat(C().map(function(c){return {l:c.name,fn:'goCat('+c.id+')'};}),[{l:'Hakkımızda',fn:"goPage('about')"},{l:'Bayi Ol',fn:"goPage('dealer')"},{l:'İletişim',fn:"goPage('contact')"}]);
+  var html=items.map(function(x){return '<a onclick="'+x.fn+'">'+x.l+'</a>';}).join('');
   document.getElementById('navIn').innerHTML=html;
   document.getElementById('mobNav').innerHTML=html;
 }
 function toggleMob(){document.getElementById('mobNav').classList.toggle('open');}
 
-/* ROUTING */
-function goHome(){closeSrch();renderHome();scrollTo(0,0);}
-function goCat(id){closeSrch();renderCatPage(id);scrollTo(0,0);}
+function goHome(){closeSrch();document.getElementById('mobNav').classList.remove('open');renderHome();window.scrollTo(0,0);}
+function goCat(id){closeSrch();document.getElementById('mobNav').classList.remove('open');renderCatPage(id);window.scrollTo(0,0);}
 function goPage(p){
-  closeSrch();
-  document.getElementById('mobNav').classList.remove('open');
+  closeSrch();document.getElementById('mobNav').classList.remove('open');
   if(p==='about')renderAbout();
   else if(p==='contact')renderContact();
   else if(p==='dealer')renderDealer();
   else if(p==='bank')renderBank();
-  else if(p==='satis'||p==='garanti'||p==='gizlilik'||p==='teslimat'||p==='kosullar')renderLegal(p);
-  scrollTo(0,0);
+  else renderLegal(p);
+  window.scrollTo(0,0);
 }
 function closeSrch(){document.getElementById('srchDrop').classList.remove('open');}
 
 /* SLIDER */
-var si=0,st=null;
+var si=0,stimer=null;
 var SLIDES=[{l:'MDF Panel Koleksiyonu'},{l:'Akustik Yalıtım Panelleri'},{l:'Osmanlı Motifler'},{l:'Duvar Çıtası Serisi'}];
 
 function renderHome(){
-  const s=S(),cats=C(),prods=P().filter(function(p){return p.active;});
+  var s=S(),cats=C(),prods=P().filter(function(p){return p.active;});
+  var slideHtml=SLIDES.map(function(sl,i){
+    return '<div class="slide" id="sl'+i+'"><div class="slide-ph"><div class="sn">0'+(i+1)+'</div><div class="sl">'+sl.l+'</div></div><div class="slide-cap" id="scap'+i+'">'+sl.l+'</div></div>';
+  }).join('');
+  var dotsHtml=SLIDES.map(function(_,i){return '<div class="s-dot'+(i===0?' on':'')+'" onclick="sTo('+i+')"></div>';}).join('');
+  var campHtml='';
+  if(s.campaign&&s.campaign.active){
+    campHtml='<div class="camp-w"><div class="camp-box"><div class="camp-txt"><div class="camp-tag">🎯 Özel Kampanya</div><h2>'+s.campaign.title+'</h2><p>'+s.campaign.desc+'</p><button class="btn-g" style="margin-top:22px;border:none;cursor:pointer;" onclick="goPage(\'contact\')">Hemen Teklif Al</button></div><div class="camp-bdg"><div class="pct">'+s.campaign.pct+'</div><div class="lbl">'+s.campaign.label+'</div></div></div></div>';
+  }
   document.getElementById('main').innerHTML=
   '<section class="hero">'+
-  '<div class="hero-l">'+
-  '<div class="hero-pill">Premium Dekorasyon</div>'+
+  '<div class="hero-l"><div class="hero-pill">Premium Dekorasyon</div>'+
   '<h1 class="hero-h1">Mekanlarınıza<br><span>Prestij</span> Katın</h1>'+
   '<p class="hero-p">MDF Panelden Akustik Panele, Lambri\'den Süpürgeliğe kadar geniş ürün yelpazemizle mekanlarınızı dönüştürüyoruz. 10.000\'den fazla tasarım seçeneği.</p>'+
-  '<div class="hero-btns">'+
-  '<span class="btn-g" onclick="goPage(\'about\')">Bizi Tanıyın</span>'+
-  '<span class="btn-o" onclick="goPage(\'contact\')">Teklif Alın</span>'+
-  '</div></div>'+
-  '<div class="hero-r">'+
-  '<div class="slides" id="slidesW">'+
-  SLIDES.map(function(sl,i){return '<div class="slide" id="sl'+i+'"><div class="slide-ph"><div class="sn">0'+(i+1)+'</div><div class="sl">'+sl.l+'</div></div><div class="slide-cap" id="scap'+i+'">'+sl.l+'</div></div>';}).join('')+
-  '</div>'+
+  '<div class="hero-btns"><button class="btn-g" onclick="goPage(\'about\')" style="border:none;cursor:pointer;">Bizi Tanıyın</button><button class="btn-o" onclick="goPage(\'contact\')" style="cursor:pointer;">Teklif Alın</button></div></div>'+
+  '<div class="hero-r"><div class="slides" id="slidesW">'+slideHtml+'</div>'+
   '<div class="s-arr prev" onclick="sMove(-1)">&#8249;</div>'+
   '<div class="s-arr next" onclick="sMove(1)">&#8250;</div>'+
-  '<div class="s-dots" id="sDots">'+SLIDES.map(function(_,i){return '<div class="s-dot'+(i===0?' on':'')+'" onclick="sTo('+i+')"></div>';}).join('')+'</div>'+
-  '</div></section>'+
-
+  '<div class="s-dots" id="sDots">'+dotsHtml+'</div></div></section>'+
   '<div class="feats"><div class="feats-g">'+
   '<div class="feat"><div class="feat-ico">✓</div><div class="feat-t"><strong>%100 Müşteri Memnuniyeti</strong><span>Kalite garantisi</span></div></div>'+
   '<div class="feat"><div class="feat-ico">🚚</div><div class="feat-t"><strong>Hızlı Kargo</strong><span>Türkiye geneli</span></div></div>'+
   '<div class="feat"><div class="feat-ico">🏭</div><div class="feat-t"><strong>Toptan Satış</strong><span>Bayi & firma fiyatları</span></div></div>'+
   '<div class="feat"><div class="feat-ico">📞</div><div class="feat-t"><strong>Uzman Destek</strong><span>0542 646 12 65</span></div></div>'+
   '</div></div>'+
-
   '<section class="sec sec-alt">'+
   '<div class="sec-hd"><div class="sec-tag">Ürün Koleksiyonu</div><h2 class="sec-tit">Tüm <span>Ürünler</span></h2><div class="sec-rule"></div></div>'+
   '<div class="cat-tabs" id="homeTabs"><div class="c-tab on" onclick="hFilter(\'all\',this)">Tümü</div>'+
   cats.map(function(c){return '<div class="c-tab" onclick="hFilter('+c.id+',this)">'+c.name+'</div>';}).join('')+
-  '</div>'+
-  '<div class="prods-g" id="homeGrid">'+prods.map(pCard).join('')+'</div>'+
-  '</section>'+
-
-  (s.campaign.active?
-  '<div class="camp-w"><div class="camp-box">'+
-  '<div class="camp-txt"><div class="camp-tag">🎯 Özel Kampanya</div><h2>'+s.campaign.title+'</h2><p>'+s.campaign.desc+'</p>'+
-  '<span class="btn-g" style="display:inline-block;margin-top:22px;" onclick="goPage(\'contact\')">Hemen Teklif Al</span>'+
-  '</div><div class="camp-bdg"><div class="pct">'+s.campaign.pct+'</div><div class="lbl">'+s.campaign.label+'</div></div>'+
-  '</div></div>':'')+
-
-  '<div class="dealer">'+
-  '<div class="sec-tag">Büyüyen Ağımıza Katılın</div>'+
+  '</div><div class="prods-g" id="homeGrid">'+prods.map(pCard).join('')+'</div></section>'+
+  campHtml+
+  '<div class="dealer"><div class="sec-tag">Büyüyen Ağımıza Katılın</div>'+
   '<h2>Bayimiz Olmak <span>İster Misiniz?</span></h2>'+
   '<p>Türkiye genelinde büyüyen bayi ağımıza katılın. Özel fiyatlar, öncelikli stok ve satış desteği ile kazancınızı artırın.</p>'+
-  '<span class="btn-g" onclick="goPage(\'dealer\')" style="cursor:pointer;display:inline-block;">Bayi Başvurusu Yap</span>'+
-  '</div>';
-
-  injectBanners();startSlider();
+  '<button class="btn-g" onclick="goPage(\'dealer\')" style="border:none;cursor:pointer;">Bayi Başvurusu Yap</button></div>';
+  injectBanners(); startSlider();
 }
 
 function injectBanners(){
-  var banners=ld('banners',[]);
-  var injected=false;
-  for(var i=0;i<4;i++){
-    var b=banners[i];
-    var slide=document.getElementById('sl'+i);
-    if(!slide)continue;
-    if(b&&b.img){
-      injected=true;
-      var img=document.createElement('img');
-      img.src=b.img;img.alt=b.label||'Slayt '+(i+1);
-      slide.insertBefore(img,slide.firstChild);
-      var cap=document.getElementById('scap'+i);
-      if(cap&&b.label)cap.textContent=b.label;
+  var banners=BN();
+  var anyLoaded=banners.some(function(b){return b.img&&b.img.length>10;});
+  banners.forEach(function(b,i){
+    var slide=document.getElementById('sl'+i); if(!slide) return;
+    if(b.img&&b.img.length>10){
+      var existing=slide.querySelector('img');
+      if(!existing){var img=document.createElement('img');img.src=b.img;img.alt=b.label||'';slide.insertBefore(img,slide.firstChild);}
+      var cap=document.getElementById('scap'+i); if(cap&&b.label)cap.textContent=b.label;
     }
-  }
-  if(!injected){
-    var pp=P().filter(function(p){return p.active&&p.img;});
-    pp.slice(0,4).forEach(function(p,i){
-      var slide=document.getElementById('sl'+i);if(!slide)return;
-      var img=document.createElement('img');img.src=p.img;img.alt=p.name;
-      slide.insertBefore(img,slide.firstChild);
+  });
+  if(!anyLoaded){
+    P().filter(function(p){return p.active&&p.img&&p.img.length>10;}).slice(0,4).forEach(function(p,i){
+      var slide=document.getElementById('sl'+i); if(!slide||slide.querySelector('img'))return;
+      var img=document.createElement('img');img.src=p.img;img.alt=p.name;slide.insertBefore(img,slide.firstChild);
     });
   }
 }
 
-function startSlider(){si=0;if(st)clearInterval(st);st=setInterval(function(){sMove(1);},4500);}
-function sMove(d){
-  var w=document.getElementById('slidesW');if(!w)return;
-  si=(si+d+SLIDES.length)%SLIDES.length;
-  w.style.transform='translateX(-'+si*100+'%)';
-  document.querySelectorAll('.s-dot').forEach(function(x,i){x.classList.toggle('on',i===si);});
-}
+function startSlider(){si=0;if(stimer)clearInterval(stimer);stimer=setInterval(function(){sMove(1);},4500);}
+function sMove(d){var w=document.getElementById('slidesW');if(!w)return;si=(si+d+SLIDES.length)%SLIDES.length;w.style.transform='translateX(-'+si*100+'%)';document.querySelectorAll('.s-dot').forEach(function(x,i){x.classList.toggle('on',i===si);});}
 function sTo(i){si=i;var w=document.getElementById('slidesW');if(w)w.style.transform='translateX(-'+si*100+'%)';document.querySelectorAll('.s-dot').forEach(function(x,j){x.classList.toggle('on',j===si);});}
 
 function hFilter(catId,btn){
-  document.querySelectorAll('.c-tab').forEach(function(t){t.classList.remove('on');});btn.classList.add('on');
+  document.querySelectorAll('.c-tab').forEach(function(t){t.classList.remove('on');}); btn.classList.add('on');
   var ps=P().filter(function(p){return p.active;});
-  if(catId!=='all')ps=ps.filter(function(p){return p.catId===catId;});
+  if(catId!=='all') ps=ps.filter(function(p){return p.catId===catId;});
   document.getElementById('homeGrid').innerHTML=ps.map(pCard).join('')||'<p style="color:var(--m);grid-column:1/-1;padding:16px 0;">Bu kategoride ürün bulunamadı.</p>';
 }
 
-/* CAT PAGE */
 function renderCatPage(catId){
   var cats=C(),prods=P().filter(function(p){return p.active&&p.catId===catId;});
   var cat=cats.find(function(c){return c.id===catId;})||cats[0];
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / '+cat.name+'</div><h1>'+cat.name+'</h1></div>'+
   '<div class="flt-row"><span class="flt-lbl">Sırala:</span>'+
-  '<button class="flt-b on" onclick="sortCat('+catId+',\'all\',this)">Tümü ('+prods.length+')</button>'+
-  '<button class="flt-b" onclick="sortCat('+catId+',\'asc\',this)">Fiyat ↑</button>'+
-  '<button class="flt-b" onclick="sortCat('+catId+',\'desc\',this)">Fiyat ↓</button>'+
-  '<button class="flt-b" onclick="sortCat('+catId+',\'new\',this)">Yeni</button></div>'+
+  '<button class="flt-b on" type="button" onclick="sortCat('+catId+',\'all\',this)">Tümü ('+prods.length+')</button>'+
+  '<button class="flt-b" type="button" onclick="sortCat('+catId+',\'asc\',this)">Fiyat ↑</button>'+
+  '<button class="flt-b" type="button" onclick="sortCat('+catId+',\'desc\',this)">Fiyat ↓</button>'+
+  '<button class="flt-b" type="button" onclick="sortCat('+catId+',\'new\',this)">Yeni</button></div>'+
   '<div class="pg-body"><div class="prods-g" id="catGrid">'+
   (prods.length?prods.map(pCard).join(''):'<p style="color:var(--m);grid-column:1/-1;">Henüz ürün eklenmemiş.</p>')+
   '</div></div>';
 }
 function sortCat(catId,sort,btn){
-  document.querySelectorAll('.flt-b').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');
+  document.querySelectorAll('.flt-b').forEach(function(b){b.classList.remove('on');}); btn.classList.add('on');
   var ps=P().filter(function(p){return p.active&&p.catId===catId;});
-  if(sort==='asc')ps.sort(function(a,b){return a.price-b.price;});
-  else if(sort==='desc')ps.sort(function(a,b){return b.price-a.price;});
-  else if(sort==='new')ps=ps.filter(function(p){return p.badge==='Yeni';});
+  if(sort==='asc') ps.sort(function(a,b){return a.price-b.price;});
+  else if(sort==='desc') ps.sort(function(a,b){return b.price-a.price;});
+  else if(sort==='new') ps=ps.filter(function(p){return p.badge==='Yeni';});
   document.getElementById('catGrid').innerHTML=ps.map(pCard).join('')||'<p style="color:var(--m);">Ürün bulunamadı.</p>';
 }
 
-/* PRODUCT CARD */
 function pCard(p){
-  var imgH=p.img?'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy">':'<div class="pc-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>';
+  var imgH=p.img&&p.img.length>10?'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy">':'<div class="pc-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>';
   return '<div class="pc" onclick="openModal('+p.id+')">'+
-    '<div class="pc-img">'+imgH+(p.badge?'<div class="pc-bdg '+(p.badge==='Yeni'?'bn':'bs')+'">'+p.badge+'</div>':'')+' </div>'+
-    '<div class="pc-body">'+
-    '<h3>'+p.name+'</h3>'+
-    '<div class="pc-code">'+p.code+'</div>'+
-    (p.colors&&p.colors.length?'<div class="pc-cols">'+p.colors.map(function(c){return '<span class="pc-col">'+c+'</span>';}).join('')+'</div>':'')+
-    '<div class="pc-price"><span class="p-now">'+p.price+' ₺</span>'+(p.oldPrice?'<span class="p-was">'+p.oldPrice+' ₺</span>':'')+'<span class="p-unit">/ '+p.unit+'</span></div>'+
-    '<div class="pc-ft">'+
-    '<button class="btn-det" onclick="event.stopPropagation();openModal('+p.id+')">İncele</button>'+
-    '<button class="btn-qte" onclick="event.stopPropagation();reqQuote(\''+p.name.replace(/'/g,"\\'")+'\')" >Teklif Al</button>'+
-    '</div></div></div>';
+  '<div class="pc-img">'+imgH+(p.badge?'<div class="pc-bdg '+(p.badge==='Yeni'?'bn':'bs')+'">'+p.badge+'</div>':'')+' </div>'+
+  '<div class="pc-body"><h3>'+p.name+'</h3><div class="pc-code">'+p.code+'</div>'+
+  (p.colors&&p.colors.length?'<div class="pc-cols">'+p.colors.map(function(c){return '<span class="pc-col">'+c+'</span>';}).join('')+'</div>':'')+
+  '<div class="pc-price"><span class="p-now">'+p.price+' ₺</span>'+(p.oldPrice?'<span class="p-was">'+p.oldPrice+' ₺</span>':'')+'<span class="p-unit">/ '+p.unit+'</span></div>'+
+  '<div class="pc-ft"><button class="btn-det" onclick="event.stopPropagation();openModal('+p.id+')">İncele</button><button class="btn-qte" onclick="event.stopPropagation();reqQuote(\''+p.name.replace(/'/g,"\\'")+'\')" >Teklif Al</button></div></div></div>';
 }
 
-/* MODAL */
 function openModal(id){
-  var p=P().find(function(x){return x.id===id;});if(!p)return;
+  var p=P().find(function(x){return x.id===id;}); if(!p) return;
   var wa=S().whatsapp.replace(/\D/g,'');
   document.getElementById('modalBody').innerHTML=
-    '<div class="modal-imgw">'+(p.img?'<img src="'+p.img+'" alt="'+p.name+'">'+'':'<div style="width:100%;min-height:260px;background:var(--d3);display:flex;align-items:center;justify-content:center;"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.08)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>')+'</div>'+
-    '<div class="modal-info">'+
-    '<h3>'+p.name+'</h3>'+
-    '<div class="m-code">Stok Kodu: '+p.code+'</div>'+
-    '<div class="m-price">'+p.price+' ₺ '+(p.oldPrice?'<span style="font-size:15px;color:var(--m);text-decoration:line-through;">'+p.oldPrice+' ₺</span>':'')+'</div>'+
-    '<div class="m-unit">Birim: 1 '+p.unit+'</div>'+
-    '<div class="m-desc">'+(p.desc||'Premium kalite ürün.')+'</div>'+
-    (p.colors&&p.colors.length?'<div class="m-chips">'+p.colors.map(function(c){return '<span class="m-chip">'+c+'</span>';}).join('')+'</div>':'')+
-    '<button class="wa-big" onclick="reqQuote(\''+p.name.replace(/'/g,"\\'")+'\')">'+
-    '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>'+
-    ' WhatsApp ile Teklif Al</button></div>';
+  '<div class="modal-imgw">'+(p.img&&p.img.length>10?'<img src="'+p.img+'" alt="'+p.name+'">':'<div style="width:100%;min-height:260px;background:var(--d3);display:flex;align-items:center;justify-content:center;"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.08)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>')+'</div>'+
+  '<div class="modal-info"><h3>'+p.name+'</h3><div class="m-code">Stok Kodu: '+p.code+'</div>'+
+  '<div class="m-price">'+p.price+' ₺ '+(p.oldPrice?'<span style="font-size:15px;color:var(--m);text-decoration:line-through;">'+p.oldPrice+' ₺</span>':'')+'</div>'+
+  '<div class="m-unit">Birim: 1 '+p.unit+'</div>'+
+  '<div class="m-desc">'+(p.desc||'Premium kalite ürün.')+'</div>'+
+  (p.colors&&p.colors.length?'<div class="m-chips">'+p.colors.map(function(c){return '<span class="m-chip">'+c+'</span>';}).join('')+'</div>':'')+
+  '<button class="wa-big" onclick="reqQuote(\''+p.name.replace(/'/g,"\\'")+'\')">'+waIcon()+' WhatsApp ile Teklif Al</button></div>';
   document.getElementById('prodModal').classList.add('open');
 }
 function closeModal(){document.getElementById('prodModal').classList.remove('open');}
 function reqQuote(n){var wa=S().whatsapp.replace(/\D/g,'');window.open('https://wa.me/'+wa+'?text='+encodeURIComponent('Merhaba, "'+n+'" ürünü hakkında fiyat teklifi almak istiyorum.'),'_blank');}
+function waIcon(){return '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>';}
 
-/* SEARCH */
 function liveSearch(){
   var q=document.getElementById('srchInp').value.trim().toLowerCase();
-  var sd=document.getElementById('srchDrop');
-  if(q.length<2){sd.classList.remove('open');return;}
+  var sd=document.getElementById('srchDrop'); if(q.length<2){sd.classList.remove('open');return;}
   var res=P().filter(function(p){return p.active&&(p.name.toLowerCase().indexOf(q)>-1||p.code.toLowerCase().indexOf(q)>-1);});
   if(!res.length){sd.classList.remove('open');return;}
   sd.innerHTML=res.slice(0,6).map(function(p){
-    return '<div class="srch-item" onclick="closeSrch();openModal('+p.id+')">'+
-    '<div class="srch-thumb">'+(p.img?'<img src="'+p.img+'" alt="">':'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.15)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>')+'</div>'+
-    '<div class="srch-info"><strong>'+p.name+'</strong><span>'+p.price+' ₺ / '+p.unit+'</span></div></div>';
+    return '<div class="si" onclick="closeSrch();openModal('+p.id+')">'+
+    '<div class="sithumb">'+(p.img&&p.img.length>10?'<img src="'+p.img+'" alt="">':'')+'</div>'+
+    '<div class="siinfo"><strong>'+p.name+'</strong><span>'+p.price+' ₺ / '+p.unit+'</span></div></div>';
   }).join('');
   sd.classList.add('open');
 }
 function doSearch(){
-  var q=document.getElementById('srchInp').value.trim().toLowerCase();if(!q)return;
-  closeSrch();
+  var q=document.getElementById('srchInp').value.trim().toLowerCase(); if(!q) return; closeSrch();
   var res=P().filter(function(p){return p.active&&(p.name.toLowerCase().indexOf(q)>-1||p.code.toLowerCase().indexOf(q)>-1);});
   document.getElementById('main').innerHTML=
-    '<div class="pg-hd"><h1>Arama: "'+q+'"</h1><div class="pg-bc">'+res.length+' sonuç bulundu</div></div>'+
-    '<div class="pg-body"><div class="prods-g">'+(res.length?res.map(pCard).join(''):'<p style="color:var(--m);grid-column:1/-1;">Sonuç bulunamadı.</p>')+'</div></div>';
-  scrollTo(0,0);
+  '<div class="pg-hd"><h1>Arama: "'+q+'"</h1><div class="pg-bc">'+res.length+' sonuç bulundu</div></div>'+
+  '<div class="pg-body"><div class="prods-g">'+(res.length?res.map(pCard).join(''):'<p style="color:var(--m);grid-column:1/-1;">Sonuç bulunamadı.</p>')+'</div></div>';
+  window.scrollTo(0,0);
 }
 
-/* ABOUT */
 function renderAbout(){
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / Hakkımızda</div><h1>Hakkımızda</h1></div>'+
   '<div class="pg-body"><div class="about-g">'+
-  '<div class="a-txt">'+
-  '<div class="sec-tag">Biz Kimiz?</div>'+
-  '<h2 class="sec-tit" style="text-align:left;">Dekorasyonda <span>Güven</span> ve Kalite</h2>'+
-  '<div class="sec-rule" style="margin:12px 0 0;"></div>'+
+  '<div class="a-txt"><div class="sec-tag">Biz Kimiz?</div><h2 class="sec-tit" style="text-align:left;">Dekorasyonda <span>Güven</span> ve Kalite</h2><div class="sec-rule" style="margin:12px 0 0;"></div>'+
   '<p>2016 yılında kurulan firmamız DekorPanel — Osmanlı Saray Tavanları — iç mekânlarda gösteriş ve zarafeti harmanlayarak, geleneklerimizle geleceği buluşturarak, kaliteli ürünleri birbirine entegre ederek kombine etmekte ve geniş ürün yelpazemizle dekorasyon ihtiyaçlarınızın tamamına yakınını karşılamaktadır.</p>'+
-  '<p>Osmanlisaraytavanlari.com tescilli bir markadır. DekorPanel — Osmanlı Saray Tavanları — yüksek kaliteli ve benzersiz tasarımlarda iç dekorasyon profilleri, dekoratif mobilya aplikasyon profilleri ve Osmanlı saray tavan göbek, motif aksesuar hizmetleri sunan lider bir kuruluştur.</p>'+
-  '<p>Geniş ürün yelpazemizde 10.000\'den fazla farklı tasarımda kartonpiyer, süpürgelik, lambiri, iç-dış köşe, bordür, pervaz, tavan göbek uygulamalarında kullanılan iç dekorasyon profilleri; modüler mobilya ve koltuk üretiminde dekoratif aplikasyon olarak kullanılan dekoratif mobilya profilleri bulunmaktadır.</p>'+
-  '<div class="a-stats">'+
-  '<div class="astat"><strong>2016</strong><span>Kuruluş Yılı</span></div>'+
-  '<div class="astat"><strong>10.000+</strong><span>Ürün Tasarımı</span></div>'+
-  '<div class="astat"><strong>81 İl</strong><span>Türkiye Geneli</span></div>'+
-  '<div class="astat"><strong>%100</strong><span>Müşteri Memnuniyeti</span></div>'+
-  '</div></div>'+
-  '<div class="a-side">'+
-  '<h3>Banka Hesaplarımız</h3>'+
+  '<p>Osmanlisaraytavanlari.com tescilli bir markadır. Yüksek kaliteli ve benzersiz tasarımlarda iç dekorasyon profilleri, dekoratif mobilya aplikasyon profilleri ve Osmanlı saray tavan göbek, motif aksesuar hizmetleri sunmaktadır.</p>'+
+  '<p>Geniş ürün yelpazemizde 10.000\'den fazla farklı tasarımda kartonpiyer, süpürgelik, lambiri, iç-dış köşe, bordür, pervaz, tavan göbek uygulamalarında kullanılan iç dekorasyon profilleri bulunmaktadır.</p>'+
+  '<div class="a-stats"><div class="astat"><strong>2016</strong><span>Kuruluş Yılı</span></div><div class="astat"><strong>10.000+</strong><span>Ürün Tasarımı</span></div><div class="astat"><strong>81 İl</strong><span>Türkiye Geneli</span></div><div class="astat"><strong>%100</strong><span>Müşteri Memnuniyeti</span></div></div></div>'+
+  '<div class="a-side"><h3>Banka Hesaplarımız</h3>'+
   '<div class="bank"><strong>GARANTİ BANKASI</strong><p>Hakan Kaymak — Ereğli / KONYA</p><p>Şube: 592 — Hesap No: 6296960</p><div class="iban">TR69 0006 2000 5920 0006 2969 60</div></div>'+
   '<div class="bank"><strong>İŞ BANKASI</strong><p>Hakan Kaymak</p><div class="iban">TR95 0006 4000 0014 5211 3009 39</div></div>'+
-  '<div style="margin-top:22px;padding-top:22px;border-top:1px solid rgba(201,168,76,.07);">'+
+  '<div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(201,168,76,.07);">'+
   '<a onclick="goPage(\'contact\')" style="display:block;color:var(--gold);font-size:13px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;">Bize Ulaşın →</a>'+
   '<a onclick="goPage(\'dealer\')" style="display:block;color:var(--gold);font-size:13px;padding:7px 0;cursor:pointer;">Bayi Başvurusu →</a>'+
   '</div></div></div></div>';
 }
 
-/* BANK */
 function renderBank(){
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / Banka Hesaplarımız</div><h1>Banka Hesaplarımız</h1></div>'+
-  '<div class="pg-body" style="max-width:680px;">'+
-  '<p style="color:var(--m);margin-bottom:28px;font-size:14px;line-height:1.85;">Havale ve EFT ödemelerde açıklama kısmına adınızı ve sipariş numaranızı yazmayı unutmayınız.</p>'+
+  '<div class="pg-body" style="max-width:680px;"><p style="color:var(--m);margin-bottom:28px;font-size:14px;line-height:1.85;">Havale ve EFT ödemelerinde açıklama kısmına adınızı ve sipariş numaranızı yazmayı unutmayınız.</p>'+
   '<div class="bank" style="margin-bottom:14px;"><strong>GARANTİ BANKASI</strong><p>Hakan Kaymak — Ereğli / KONYA</p><p>Şube: 592 — Hesap No: 6296960</p><div class="iban">TR69 0006 2000 5920 0006 2969 60</div></div>'+
-  '<div class="bank"><strong>İŞ BANKASI</strong><p>Hakan Kaymak</p><div class="iban">TR95 0006 4000 0014 5211 3009 39</div></div>'+
-  '</div>';
+  '<div class="bank"><strong>İŞ BANKASI</strong><p>Hakan Kaymak</p><div class="iban">TR95 0006 4000 0014 5211 3009 39</div></div></div>';
 }
 
-/* DEALER */
 function renderDealer(){
   var wa=S().whatsapp.replace(/\D/g,'');
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / Bayi Başvurusu</div><h1>Bayimiz Olun</h1></div>'+
-  '<div class="pg-body" style="max-width:780px;">'+
-  '<div style="background:var(--d3);border:1px solid rgba(201,168,76,.09);padding:44px;text-align:center;">'+
+  '<div class="pg-body" style="max-width:780px;"><div style="background:var(--d3);border:1px solid rgba(201,168,76,.09);padding:44px;text-align:center;">'+
   '<h2 style="font-family:\'Cormorant Garamond\',serif;font-size:30px;color:var(--w);margin-bottom:14px;">Güçlü Bir Ortaklık</h2>'+
   '<p style="color:var(--m);font-size:14px;line-height:1.85;max-width:520px;margin:0 auto 32px;">Türkiye\'nin en hızlı büyüyen dekorasyon ürünleri bayi ağına katılın.</p>'+
   '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px;">'+
-  [['💰','Özel Fiyat','Toptan bayi fiyatları'],['📦','Öncelikli Stok','Her zaman hazır ürün'],['🎯','Satış Desteği','Teknik & pazarlama']].map(function(x){
-    return '<div style="background:var(--d4);padding:20px;border:1px solid rgba(201,168,76,.07);"><div style="font-size:26px;margin-bottom:8px;">'+x[0]+'</div><strong style="color:var(--gold);display:block;margin-bottom:5px;font-size:12.5px;">'+x[1]+'</strong><span style="font-size:12px;color:var(--m);">'+x[2]+'</span></div>';
-  }).join('')+
-  '</div>'+
-  '<a href="https://wa.me/'+wa+'?text='+encodeURIComponent('Merhaba, bayi olmak istiyorum.')+'" target="_blank" class="btn-g" style="display:inline-block;">WhatsApp ile Başvur</a>'+
-  '</div></div>';
+  [['💰','Özel Fiyat','Toptan bayi fiyatları'],['📦','Öncelikli Stok','Her zaman hazır ürün'],['🎯','Satış Desteği','Teknik & pazarlama']].map(function(x){return '<div style="background:var(--d4);padding:20px;border:1px solid rgba(201,168,76,.07);"><div style="font-size:26px;margin-bottom:8px;">'+x[0]+'</div><strong style="color:var(--gold);display:block;margin-bottom:5px;font-size:12.5px;">'+x[1]+'</strong><span style="font-size:12px;color:var(--m);">'+x[2]+'</span></div>';}).join('')+
+  '</div><a href="https://wa.me/'+wa+'?text='+encodeURIComponent('Merhaba, bayi olmak istiyorum.')+'" target="_blank" class="btn-g" style="display:inline-block;">WhatsApp ile Başvur</a></div></div>';
 }
 
-/* CONTACT */
 function renderContact(){
   var s=S(),wa=s.whatsapp.replace(/\D/g,'');
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / İletişim</div><h1>İletişim</h1></div>'+
-  '<div class="pg-body"><div class="contact-g">'+
-  '<div>'+
+  '<div class="pg-body"><div class="contact-g"><div>'+
   '<h2 style="font-family:\'Cormorant Garamond\',serif;font-size:26px;color:var(--w);margin-bottom:24px;">Bize Ulaşın</h2>'+
   '<div class="cc"><div class="ico">📍</div><div><strong>Showroom Adresimiz</strong><p>Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd.<br>Mustafa Özsüllü Apt. No:56/A<br><span style="color:var(--gold);font-weight:600;">KONYA</span></p></div></div>'+
-  '<div class="cc"><div class="ico">📞</div><div><strong>Müşteri Temsilcisi</strong><p><a href="tel:05426461265" style="color:var(--gold);">0542 646 12 65</a></p></div></div>'+
-  '<div class="cc"><div class="ico">📧</div><div><strong>E-Posta</strong><p><a href="mailto:'+s.email+'" style="color:var(--gold);">'+s.email+'</a></p></div></div>'+
-  '<a href="https://wa.me/'+wa+'?text='+encodeURIComponent('Merhaba, bilgi almak istiyorum.')+'" target="_blank" rel="noopener" class="btn-g" style="display:inline-flex;align-items:center;gap:7px;margin-top:6px;">WhatsApp\'tan Yaz</a>'+
-  '</div>'+
-  '<div class="cf-w"><h3>Mesaj Gönderin</h3>'+
+  '<div class="cc"><div class="ico">📞</div><div><strong>Müşteri Temsilcisi</strong><p><a href="tel:05426461265">0542 646 12 65</a></p></div></div>'+
+  '<div class="cc"><div class="ico">📧</div><div><strong>E-Posta</strong><p><a href="mailto:'+s.email+'">'+s.email+'</a></p></div></div>'+
+  '<a href="https://wa.me/'+wa+'?text='+encodeURIComponent('Merhaba, bilgi almak istiyorum.')+'" target="_blank" rel="noopener" class="btn-g" style="display:inline-flex;align-items:center;gap:7px;margin-top:6px;border:none;cursor:pointer;">'+waIcon()+' WhatsApp\'tan Yaz</a>'+
+  '</div><div class="cf-w"><h3>Mesaj Gönderin</h3>'+
   '<form onsubmit="submitCF(event)">'+
   '<div class="cf-g"><label>Ad Soyad *</label><input class="cf-inp" id="cfN" type="text" required></div>'+
   '<div class="cf-g"><label>Telefon</label><input class="cf-inp" id="cfP" type="tel"></div>'+
@@ -687,29 +602,26 @@ function renderContact(){
 }
 function submitCF(e){e.preventDefault();var wa=S().whatsapp.replace(/\D/g,'');window.open('https://wa.me/'+wa+'?text='+encodeURIComponent('Ad: '+document.getElementById('cfN').value+'\nTel: '+document.getElementById('cfP').value+'\nMesaj: '+document.getElementById('cfM').value),'_blank');}
 
-/* LEGAL */
 function renderLegal(page){
   var titles={satis:'Satış Sözleşmesi',garanti:'Garanti ve İade Şartları',gizlilik:'Gizlilik Sözleşmesi',teslimat:'Teslimat ve İade',kosullar:'Site Kullanım Koşulları'};
   var contents={
-    satis:'<h3>Mesafeli Satış Sözleşmesi</h3><p><strong>Satıcı:</strong> Dekor Panel — Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. No:56/A KONYA — Tel: 0542 646 12 65</p><h3>1. Konu</h3><p>İşbu sözleşme, alıcının Dekor Panel web sitesi üzerinden siparişini verdiği ürünlerin satışı ve teslimi ile ilgili 6502 sayılı Kanun hükümleri gereğince tarafların hak ve yükümlülüklerini kapsar.</p><h3>2. Teslimat</h3><p>Ürünler stok durumuna göre sipariş tarihinden itibaren 3-7 iş günü içinde kargo ile teslim edilmektedir.</p><h3>3. Ödeme</h3><p>Ödemeler havale/EFT yöntemiyle gerçekleştirilmektedir.</p><h3>4. Cayma Hakkı</h3><p>Alıcı teslim tarihinden itibaren 14 gün içinde cayma hakkını kullanabilir.</p>',
-    garanti:'<h3>Garanti Şartları</h3><p>Tüm ürünlerimiz 2 yıl garanti kapsamındadır. Üretim kaynaklı malzeme ve işçilik hataları garanti kapsamındadır.</p><h3>İade Koşulları</h3><p>• Teslim tarihinden itibaren 14 gün içinde iade talebi oluşturulabilir.<br>• Ürün orijinal ambalajında, kullanılmamış ve hasarsız olmalıdır.<br>• Özel sipariş ürünler iade kapsamı dışındadır.<br>• İade kargo bedeli müşteriye aittir.</p><h3>İade Süreci</h3><p>İade talebinizi 0542 646 12 65 numaralı hattımızı arayarak iletebilirsiniz. Ürün tarafımıza ulaştıktan sonra 10 iş günü içinde ödemeniz iade edilir.</p>',
-    gizlilik:'<h3>Gizlilik ve Kişisel Verilerin Korunması</h3><p>Dekor Panel olarak kişisel verilerinizin gizliliğine önem veriyoruz.</p><h3>Toplanan Veriler</h3><p>• İletişim formları aracılığıyla ilettiğiniz ad, telefon ve e-posta bilgileri<br>• WhatsApp üzerinden iletilen mesajlar<br>• Sipariş süreçlerinde talep edilen teslimat bilgileri</p><h3>Verilerin Kullanımı</h3><p>Kişisel verileriniz yalnızca sipariş ve müşteri hizmetleri süreçlerinde kullanılmaktadır. Üçüncü şahıslarla paylaşılmamaktadır.</p><h3>KVKK Hakları</h3><p>6698 sayılı Kanun kapsamında verilerinize erişim, düzeltme ve silme haklarına sahipsiniz. Taleplerinizi info@dekorpanel.com.tr adresine iletebilirsiniz.</p>',
-    teslimat:'<h3>Teslimat Bilgileri</h3><p>Siparişleriniz stok durumuna göre 3-7 iş günü içinde kargoya teslim edilmektedir.</p><p>Türkiye\'nin 81 iline teslimat yapılmaktadır. Kargo ücreti sipariş miktarına ve adrese göre belirlenmektedir.</p><h3>Hasarlı Teslimat</h3><p>Kargo ile gelen ürünlerde teslimat anında hasar tespit edilirse kargo görevlisine tutanak tutturulması gerekmektedir.</p><h3>İade Adresi</h3><p>Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. Mustafa Özsüllü Apt. No:56/A KONYA</p>',
-    kosullar:'<h3>Site Kullanım Koşulları</h3><p>Dekor Panel web sitesine erişim ve site içeriklerinin kullanımı aşağıdaki koşullara tabidir.</p><h3>Fikri Mülkiyet</h3><p>Sitedeki tüm içerikler Dekor Panel\'e aittir. İzinsiz kopyalanamaz veya dağıtılamaz.</p><h3>Sorumluluk Sınırlaması</h3><p>Fiyat ve stok bilgileri önceden haber verilmeksizin değişebilir.</p><h3>Uygulanacak Hukuk</h3><p>İşbu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklarda Konya Mahkemeleri yetkilidir.</p>'
+    satis:'<h3>Mesafeli Satış Sözleşmesi</h3><p><strong>Satıcı:</strong> Dekopanel — Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. No:56/A KONYA — Tel: 0542 646 12 65</p><h3>1. Konu</h3><p>İşbu sözleşme, alıcının Dekopanel web sitesi üzerinden siparişini verdiği ürünlerin satışı ve teslimi ile ilgili 6502 sayılı Kanun hükümleri gereğince tarafların hak ve yükümlülüklerini kapsar.</p><h3>2. Teslimat</h3><p>Ürünler stok durumuna göre sipariş tarihinden itibaren 3-7 iş günü içinde kargo ile teslim edilmektedir.</p><h3>3. Ödeme</h3><p>Ödemeler havale/EFT yöntemiyle gerçekleştirilmektedir.</p><h3>4. Cayma Hakkı</h3><p>Alıcı teslim tarihinden itibaren 14 gün içinde cayma hakkını kullanabilir.</p>',
+    garanti:'<h3>Garanti Şartları</h3><p>Tüm ürünlerimiz 2 yıl garanti kapsamındadır.</p><h3>İade Koşulları</h3><p>• Teslim tarihinden itibaren 14 gün içinde iade talebi oluşturulabilir.<br>• Ürün orijinal ambalajında, kullanılmamış olmalıdır.<br>• Özel sipariş ürünler iade kapsamı dışındadır.<br>• İade kargo bedeli müşteriye aittir.</p>',
+    gizlilik:'<h3>Gizlilik ve KVKK</h3><p>Dekopanel olarak kişisel verilerinizin gizliliğine önem veriyoruz. Toplanan veriler yalnızca sipariş ve müşteri hizmetleri süreçlerinde kullanılmaktadır. 6698 sayılı KVKK kapsamındaki haklarınız için info@dekopanel.com.tr adresine başvurabilirsiniz.</p>',
+    teslimat:'<h3>Teslimat Bilgileri</h3><p>Siparişleriniz stok durumuna göre 3-7 iş günü içinde kargoya teslim edilmektedir. Türkiye\'nin 81 iline teslimat yapılmaktadır.</p><h3>İade Adresi</h3><p>Mimar Sinan Mh. Şht. Savcı Hakan Kılıç Cd. Mustafa Özsüllü Apt. No:56/A KONYA</p>',
+    kosullar:'<h3>Site Kullanım Koşulları</h3><p>Sitedeki tüm içerikler Dekopanel\'e aittir. İzinsiz kopyalanamaz. Fiyat ve stok bilgileri önceden haber verilmeksizin değişebilir. Uyuşmazlıklarda Konya Mahkemeleri yetkilidir.</p>'
   };
+  if(!titles[page]) return;
   document.getElementById('main').innerHTML=
   '<div class="pg-hd"><div class="pg-bc"><a onclick="goHome()">Ana Sayfa</a> / '+titles[page]+'</div><h1>'+titles[page]+'</h1></div>'+
   '<div class="pg-body" style="max-width:860px;"><div class="legal-box">'+contents[page]+'</div></div>';
 }
 
-/* FOOTER */
 function buildFooter(){
   var s=S(),cats=C();
   document.getElementById('ftEl').innerHTML=
   '<div class="ft-top">'+
-  '<div>'+
-  '<div class="ft-nm">'+s.brandName+'</div>'+
-  '<div class="ft-sb">'+s.brandSub+'</div>'+
+  '<div><div class="ft-nm">'+s.brandName+'</div><div class="ft-sb">'+s.brandSub+'</div>'+
   '<p class="ft-desc">2016 yılından bu yana premium dekorasyon ürünleriyle mekanlarınıza değer katıyoruz. 10.000+ ürün çeşidi, Türkiye geneli teslimat.</p>'+
   '<div class="ft-soc">'+
   (s.instagram?'<a class="ft-sl" href="'+s.instagram+'" target="_blank" rel="noopener" title="Instagram">📸</a>':'')+
@@ -719,11 +631,8 @@ function buildFooter(){
   '</div></div>'+
   '<div class="ft-col"><h4>Kategoriler</h4>'+cats.map(function(c){return '<a onclick="goCat('+c.id+')">'+c.name+'</a>';}).join('')+'</div>'+
   '<div class="ft-col"><h4>Kurumsal</h4>'+
-  '<a onclick="goPage(\'about\')">Hakkımızda</a>'+
-  '<a onclick="goPage(\'contact\')">Bize Ulaşın</a>'+
-  '<a onclick="goPage(\'bank\')">Banka Hesaplarımız</a>'+
-  '<a onclick="goPage(\'dealer\')">Bayi Ol</a>'+
-  '</div>'+
+  '<a onclick="goPage(\'about\')">Hakkımızda</a><a onclick="goPage(\'contact\')">Bize Ulaşın</a>'+
+  '<a onclick="goPage(\'bank\')">Banka Hesaplarımız</a><a onclick="goPage(\'dealer\')">Bayi Ol</a></div>'+
   '<div class="ft-col"><h4>Yardım & Destek</h4>'+
   '<a onclick="goPage(\'satis\')">Satış Sözleşmesi</a>'+
   '<a onclick="goPage(\'garanti\')">Garanti ve İade Şartları</a>'+
@@ -735,8 +644,8 @@ function buildFooter(){
   '<p><strong>Adres:</strong> Mimar Sinan Mh. No:56/A KONYA</p>'+
   '</div></div>'+
   '<div class="ft-bot">'+
-  '<p>© 2025 '+s.brandName+'. Tüm hakları saklıdır. | <a href="https://www.dekorpanel.com.tr">www.dekorpanel.com.tr</a></p>'+
-  '<p><a onclick="goPage(\'gizlilik\')">Gizlilik</a> · <a onclick="goPage(\'kosullar\')">Kullanım Koşulları</a></p>'+
+  '<p>© 2025 '+s.brandName+' | <a href="https://www.dekopanel.com.tr" target="_blank">www.dekopanel.com.tr</a></p>'+
+  '<div class="ft-dev">Reklam & Web Hizmetleri: <a href="https://wixmedya.com" target="_blank" rel="noopener">wixmedya</a></div>'+
   '</div>';
 }
 </script>
